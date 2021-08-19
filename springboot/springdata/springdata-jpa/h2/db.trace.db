@@ -1,0 +1,602 @@
+2021-04-01 16:29:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+insert into user (email, name) values (?, ?) [42102-200]
+2021-04-01 16:33:31 jdbc[3]: 
+org.h2.message.DbException: Syntax error in SQL statement "SET IGNORECASE [*]"; expected "=, TO, OFF" [42001-199]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.readBooleanSetting(Parser.java:4476)
+	at org.h2.command.Parser.parseSet(Parser.java:6764)
+	at org.h2.command.Parser.parsePrepared(Parser.java:923)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.engine.Engine.openSession(Engine.java:231)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.e.b(Z:2153)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET IGNORECASE [*]"; expected "=, TO, OFF"; SQL statement:
+SET IGNORECASE  [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 28 more
+2021-04-01 16:33:34 jdbc[3]: 
+org.h2.message.DbException: Syntax error in SQL statement "SET IGNORECASE [*]"; expected "=, TO, OFF" [42001-199]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:991)
+	at org.h2.command.Parser.readBooleanSetting(Parser.java:4476)
+	at org.h2.command.Parser.parseSet(Parser.java:6764)
+	at org.h2.command.Parser.parsePrepared(Parser.java:923)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:764)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.engine.Engine.openSession(Engine.java:231)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.e.b(Z:2153)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET IGNORECASE [*]"; expected "=, TO, OFF"; SQL statement:
+SET IGNORECASE  [42001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 28 more
+2021-04-01 17:06:03 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "ENTITYGRAPH" because "POST, USER, COMMENT, SYSTEM_SEQUENCE_5BF7E777_E73E_4890_B1BD_EC91400CC2E8, SYSTEM_SEQUENCE_ECE369B7_21A9_4240_9D91_D26118A27A47, SYSTEM_SEQUENCE_73569D8F_CDA9_465B_9840_B57038379222, FK72MT33DHHS48HF9GCQRQ4FXTE_INDEX_2, PRIMARY_KEY_2, PRIMARY_KEY_27, PRIMARY_KEY_6, FKS1SLVNKUEMJSQ2KJ4H3VHX7I1_INDEX_6, FK8KCUM44FVPUPYW6F5BACCX25C_INDEX_6, FKS1SLVNKUEMJSQ2KJ4H3VHX7I1, CONSTRAINT_2, FK72MT33DHHS48HF9GCQRQ4FXTE, CONSTRAINT_6, CONSTRAINT_27, FK8KCUM44FVPUPYW6F5BACCX25C" depends on it; SQL statement:
+drop schema "ENTITYGRAPH" [90107-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropSchema.update(DropSchema.java:63)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor74.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-04-01 17:06:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "ENTITYGRAPH" because "POST, USER, COMMENT, SYSTEM_SEQUENCE_5BF7E777_E73E_4890_B1BD_EC91400CC2E8, SYSTEM_SEQUENCE_ECE369B7_21A9_4240_9D91_D26118A27A47, SYSTEM_SEQUENCE_73569D8F_CDA9_465B_9840_B57038379222, FK72MT33DHHS48HF9GCQRQ4FXTE_INDEX_2, PRIMARY_KEY_2, PRIMARY_KEY_27, PRIMARY_KEY_6, FKS1SLVNKUEMJSQ2KJ4H3VHX7I1_INDEX_6, FK8KCUM44FVPUPYW6F5BACCX25C_INDEX_6, FKS1SLVNKUEMJSQ2KJ4H3VHX7I1, CONSTRAINT_2, FK72MT33DHHS48HF9GCQRQ4FXTE, CONSTRAINT_6, CONSTRAINT_27, FK8KCUM44FVPUPYW6F5BACCX25C" depends on it; SQL statement:
+drop schema "ENTITYGRAPH" [90107-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropSchema.update(DropSchema.java:63)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor74.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-04-01 17:07:23 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE SCHEMA ENTITYGRAPH IF[*] NOT EXISTS "; SQL statement:
+create SCHEMA ENTITYGRAPH if not exists [42000-199]
+2021-04-01 17:07:37 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE SCHEMA ENTITYGRAPH IF[*] NOT EXISTS ENTITYGRAPH "; SQL statement:
+create SCHEMA ENTITYGRAPH if not exists ENTITYGRAPH [42000-199]
+2021-04-01 17:07:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE SCHEMA ENTITYGRAPH IF[*] NOT EXISTS ENTITYGRAPH "; SQL statement:
+create SCHEMA ENTITYGRAPH if not exists ENTITYGRAPH [42000-199]
+2021-04-01 17:07:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE SCHEMA ENTITYGRAPH IF[*] NOT EXISTS ENTITYGRAPH "; SQL statement:
+create SCHEMA ENTITYGRAPH if not exists ENTITYGRAPH [42000-199]
+2021-04-01 17:08:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE SCHEMA ENTITYGRAPH IF[*] NOT EXISTS ENTITYGRAPH "; SQL statement:
+create SCHEMA ENTITYGRAPH if not exists ENTITYGRAPH [42000-199]
+2021-04-01 21:51:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMMENT" not found; SQL statement:
+SELECT * FROM "ENTITYGRAPH"."COMMENT" [42102-199]
+2021-06-10 22:24:17 jdbc[177]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "admin" not found; SQL statement:
+select
+        esystemrol0_.`id` as id1_5_,
+        esystemrol0_.`version` as version6_5_,
+        esystemrol0_.`authorize_role_id` as authoriz7_5_ 
+    from
+        system_role esystemrol0_ cross 
+    join
+        farukon_role erole1_ 
+    where
+        esystemrol0_.`authorize_role_id`=erole1_.`id` 
+        and erole1_.rolecode="admin" [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:134)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-10 22:24:24 jdbc[177]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "admin" not found; SQL statement:
+select
+        esystemrol0_.`id` as id1_5_,
+        esystemrol0_.`version` as version6_5_,
+        esystemrol0_.`authorize_role_id` as authoriz7_5_ 
+    from
+        system_role esystemrol0_ cross 
+    join
+        farukon_role erole1_ 
+    where
+        esystemrol0_.`authorize_role_id`=erole1_.`id` 
+        and erole1_.rolecode="admin" [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:176)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:158)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:207)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:134)
+	at org.h2.command.dml.Select.prepare(Select.java:1248)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor59.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-10 22:50:54 jdbc[288]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT *
+    FROM
+        SYSTEM_ROLE ESYSTEMROL0_ 
+    CROSS JOIN
+        FARUKON_ROLE EROLE1_ 
+            ON[*] ESYSTEMROL0_.`AUTHORIZE_ROLE_ID`=EROLE1_.`ID` "; SQL statement:
+select *
+    from
+        system_role esystemrol0_ 
+    cross join
+        farukon_role erole1_ 
+            on esystemrol0_.`authorize_role_id`=erole1_.`id` [42000-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (1, 'Joshua', 'Bloch', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (2, 'Gavin', 'King', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (3, 'Christian', 'Bauer', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (4, 'Gary', 'Gregory', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (5, 'Raoul-Gabriel', 'Urma', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (6, 'Mario', 'Fusco', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (7, 'Alan', 'Mycroft', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (8, 'Andrew Lee', 'Rubinger', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (9, 'Aslak', 'Knutsen', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (10, 'Bill', 'Burke', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHOR" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (11, 'Scott', 'Oaks', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (1, '2008-05-08', 'Effective Java', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (2, '2015-10-01', 'Java Persistence with Hibernate', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (3, '2014-08-28', 'Java 8 in Action', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (4, '2014-03-12', 'Continuous Enterprise Development in Java', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (5, '2010-09-08', 'Enterprise JavaBeans 3.1', 0) [42102-199]
+2021-06-16 22:17:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (6, '2014-04-29', 'Java Performance The Definitive Guide', 0) [42102-199]
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (1, 'Joshua', 'Bloch', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (2, 'Gavin', 'King', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (3, 'Christian', 'Bauer', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (4, 'Gary', 'Gregory', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (5, 'Raoul-Gabriel', 'Urma', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (6, 'Mario', 'Fusco', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (7, 'Alan', 'Mycroft', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (8, 'Andrew Lee', 'Rubinger', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (9, 'Aslak', 'Knutsen', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (10, 'Bill', 'Burke', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "FIRSTNAME" not found; SQL statement:
+INSERT INTO author (id, firstname, lastname, version) VALUES (11, 'Scott', 'Oaks', 0) [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:708)
+	at org.h2.command.Parser.parseColumn(Parser.java:1377)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1362)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1731)
+	at org.h2.command.Parser.parseInsert(Parser.java:1684)
+	at org.h2.command.Parser.parsePrepared(Parser.java:891)
+	at org.h2.command.Parser.parse(Parser.java:788)
+	at org.h2.command.Parser.parse(Parser.java:760)
+	at org.h2.command.Parser.prepareCommand(Parser.java:683)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.onseven.dbvis.jdbc.b.c.b(Z:243)
+	at com.onseven.dbvis.jdbc.b.g$_b.call(Z:3572)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-06-16 22:17:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO BOOK (ID, PUBLISHINGDATE, TITLE, VERSION) VALUES (6, '2014-04-29', 'Java Performance The Definitive Guide', 0 [*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO book (id, publishingdate, title, version) VALUES (6, '2014-04-29', 'Java Performance The Definitive Guide', 0 [42001-199]

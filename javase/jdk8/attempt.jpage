@@ -1,0 +1,11 @@
+class Parent {
+	public Parent(){
+		System.out.println("ctor in parent");
+	}	
+}
+class Sub extends Parent {
+	public Sub(){
+		System.out.println("ctor in Sub");
+	}
+}
+
